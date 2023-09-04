@@ -3,7 +3,7 @@
     public class VMPeliculas
     {
 
-        public string pelicula {  get; set; }
+        public string Titulo {  get; set; }
 
         public int calificacion { get; set; }
     }

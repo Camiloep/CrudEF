@@ -20,17 +20,17 @@ namespace Cinemas.Controllers
         public IActionResult resumenCalificaciones()
         {
 
-            List<VMPeliculas> Lista = (from tbpelicula in _context.Peliculas
-                                       group tbpelicula by tbpelicula.Calificacion into grupo
-                                       orderby grupo.Count() descending
+            List<VMPeliculas> Lista = (from pelicula in _context.Peliculas
+                                       group pelicula by pelicula.Titulo into grupo
+                                       orderby grupo.Max(pelicula => pelicula.Calificacion) descending
                                        select new VMPeliculas
                                        {
-                                           pelicula = grupo.Key,
-                                           calificacion = grupo.Count(),
+                                           Titulo = grupo.Key,
+                                           calificacion = grupo.Max(p => p.Calificacion),
 
-                                       }).Take(4).toList();
+                                       }).Take(5).ToList();
 
-            return View();
+            return StatusCode(StatusCodes.Status200OK, Lista);
         }
 
 

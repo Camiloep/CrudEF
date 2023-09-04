@@ -35,7 +35,7 @@ label{
     margin: 20px;
 }
 
-.card {
+.cards {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -46,10 +46,10 @@ label{
     text-align: center;
 }
 
-    .card img {
-        max-width: 100%;
-        height: auto;
-    }
+.cards img {
+    max-width: 100%;
+    height: auto;
+}
 
 /*.containerCard h1,
 .containerCard p,
