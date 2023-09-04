@@ -1,0 +1,67 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  /*background-color:#000;*/
+}
+
+/*h1,
+p,
+dt,
+dd,
+h4,
+label{
+    color: white;
+}*/
+
+
+.containerCard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+    .card img {
+        max-width: 100%;
+        height: auto;
+    }
+
+/*.containerCard h1,
+.containerCard p,
+.containerCard h4{
+    color:black;
+}
+*/
+
+.logout:hover{
+    background: red;
+}
+
+.perfil:hover{
+    background: #0132ff99
+}
